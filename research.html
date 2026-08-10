@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Saleha Rehan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Saleha Rehan</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">Background</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="hero-circles" aria-hidden="true">
+      <span style="width:160px;height:160px;top:-50px;right:-30px;background:var(--mauve-soft);"></span>
+      <span style="width:70px;height:70px;top:60%;left:6%;background:var(--terracotta-soft);"></span>
+    </div>
+    <div class="container">
+      <span class="eyebrow">Headline Research</span>
+      <h1>AI-Based Early Detection of Alzheimer's Disease Using Speech and Cognitive Analysis</h1>
+      <div>
+        <span class="tag tag-review">Manuscript under review — IEEE JBHI</span>
+        <span class="tag tag-progress">Conference paper — peer-reviewed, revisions in progress</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="field-block">
+          <span class="field-label">The problem</span>
+          <p>
+            Alzheimer's disease is typically diagnosed only after significant cognitive decline
+            has already occurred, and current diagnostic methods are expensive and invasive.
+            I wanted to explore whether speech patterns and cognitive assessment data could
+            support earlier, less invasive detection.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What I did</span>
+          <p>
+            I developed an AI-based system combining speech pattern analysis, cognitive feature
+            extraction, and machine learning to identify early indicators of Alzheimer's disease —
+            building a feature extraction pipeline from speech data, applying cognitive pattern
+            analysis, and training models to detect early-stage indicators.
+          </p>
+          <p>
+            One decision I had to own directly: the dataset wasn't paired across all tasks, so a
+            single fusion strategy wouldn't work cleanly for every part of the problem. I used
+            <strong>decision-level fusion</strong> for the binary classification task, and
+            <strong>feature-level fusion</strong> for the six-class classification task, choosing
+            each based on what the unpaired data actually allowed rather than defaulting to one
+            method throughout. That kind of judgment call — deciding how to combine
+            modalities when the data doesn't hand you a clean answer — is the part of this work
+            I'd most want to talk through with a research group.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">Status</span>
+          <p>
+            The manuscript is currently under review at the IEEE Journal of Biomedical and Health
+            Informatics (JBHI). A related conference paper on this work has been peer-reviewed and
+            is currently undergoing requested revisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary">Interested in this work? Get in touch</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Interested in discussing research fit or my application? <a href="contact.html">Reach out</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

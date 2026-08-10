@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Saleha Rehan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Saleha Rehan</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">Background</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:16px;">
+    <div class="hero-circles" aria-hidden="true">
+      <span style="width:150px;height:150px;top:-40px;left:-30px;background:var(--terracotta-soft);"></span>
+      <span style="width:80px;height:80px;top:30%;right:10%;background:var(--mauve-soft);"></span>
+    </div>
+    <div class="container">
+      <span class="eyebrow">Projects</span>
+      <h1>Two kinds of evidence: how I think, and what I've built</h1>
+      <p class="lede">
+        These projects are grouped into two clusters so the distinction is visible on the page
+        itself, not left implicit — one is about how I approach and reason through open research
+        problems, the other is about designing and building real biomedical hardware.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CLUSTER 1 ===================== -->
+  <section>
+    <div class="container">
+      <h2>Data &amp; Research Reasoning</h2>
+      <p class="cluster-frame">Projects that show how I approach and think through open research problems.</p>
+
+      <!-- FlyRank -->
+      <div class="card">
+        <h3>Testing SEO Assumptions Against Real Data</h3>
+        <p style="color:var(--ink-light); font-size:0.95rem; margin-bottom:14px;">FlyRank AI Internship</p>
+        <div>
+          <span class="tag tag-progress">In progress</span>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">The problem / context</span>
+          <p>
+            A lot of SEO advice treats certain relationships as obvious — for example, that pages
+            targeting higher search-volume keywords will naturally get more traffic. As part of an
+            ML internship at FlyRank AI, I'm working with an anonymized sample of real search and
+            content performance data to check whether that actually holds up, rather than taking
+            it for granted.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What I did</span>
+          <p>
+            I calculated the correlation between search volume and 90-day impressions and got
+            0.001 — essentially zero. Suspecting that dead pages with no impressions were skewing
+            the number, I filtered those out and re-ran it; the result didn't change. I also tested
+            whether word count differed between growing and declining pages (it didn't), and
+            examined how click-through rate falls off as ranking position drops (it followed the
+            expected shape — sharp drop-off at lower positions).
+          </p>
+          <p>
+            That last pattern led me to my current, sharpened research question:
+            <strong>does the CTR drop-off by ranking position differ between transactional and
+            informational pages?</strong> My hypothesis is that people with strong purchase intent
+            might scroll further for the right result, so transactional pages could show a
+            shallower drop-off. I chose this scoped question over the broader "what actually
+            predicts traffic?" question because it's specific and testable within my timeline —
+            I'd rather fully answer a scoped question than leave a broad one half-explored.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">Findings so far (honestly stated)</span>
+          <p>
+            Search volume alone does not predict traffic in this dataset. Word count is not a
+            differentiator between growing and declining pages. The CTR-by-intent hypothesis
+            hasn't been tested yet — that's the open question I'm currently working through,
+            including how to define a "meaningful" difference in drop-off steepness and what
+            minimum impression threshold avoids small-sample noise.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What I learned</span>
+          <p>
+            Scoping down to something specific and testable, instead of chasing the broad
+            question, is a judgment call I recognized from my Alzheimer's research too — the data
+            doesn't hand you the right method or question, you choose one based on what's actually
+            there and defend it.
+          </p>
+        </div>
+
+        <div class="note-box">This case study will be updated once the CTR-by-intent analysis is complete.</div>
+      </div>
+
+      <!-- Kidney Stone -->
+      <div class="card">
+        <h3>Kidney Stone Detection Using Image Processing</h3>
+        <div>
+          <span class="tag tag-draft">Early draft — short write-up</span>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">The problem</span>
+          <p>
+            Detecting kidney stones in medical images typically relies on manual review, which is
+            time-consuming and can miss subtle cases.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What I did</span>
+          <p>
+            I built a pipeline using segmentation, filtering, and feature extraction to
+            automatically identify probable stone locations in medical images.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">Results</span>
+          <p>
+            A working system that flags likely stone locations, functioning as diagnostic support
+            rather than a standalone diagnostic replacement. Completed as a Medical Image
+            Processing project, 2025.
+          </p>
+        </div>
+
+        <div class="note-box">
+          This write-up is intentionally short — my source material for this project is a brief
+          summary rather than a full report. A more detailed version (methodology, dataset, any
+          accuracy or limitation notes) is planned.
+        </div>
+      </div>
+
+      <!-- MRI -->
+      <div class="card">
+        <h3>Brain MRI Feature Analysis for Alzheimer's Disease</h3>
+        <p style="color:var(--ink-light); font-size:0.95rem; margin-bottom:14px;">Course project — Broadly Defined Problem Report</p>
+        <div>
+          <span class="tag tag-draft">Course project — separate from main research</span>
+        </div>
+
+        <div class="note-box">
+          This was a team course assignment (three of us, work split evenly), and it's
+          methodologically much smaller in scope than my main Alzheimer's research — 4 images, no
+          machine learning, purely observational. It uses MRI rather than the speech and cognitive
+          data my main research is built on, and I'm keeping it clearly separate here so it
+          doesn't read as the same body of work.
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">The problem / context</span>
+          <p>
+            Hippocampal atrophy is one of the earliest structural signs of Alzheimer's Disease,
+            but assessing it from MRI scans is normally done by visual inspection, which is
+            subjective and varies between observers. We wanted to see whether basic quantitative
+            image features could capture some of that difference numerically.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What we did</span>
+          <p>
+            Using 4 T1-weighted axial MRI brain slices from the public OASIS dataset (2
+            NonDemented, 2 ModerateDemented), we built a MATLAB pipeline that preprocessed each
+            image with Gaussian smoothing, histogram equalization, and intensity normalization;
+            extracted the hippocampal region using fixed proportional coordinate cropping and a
+            binary mask; and computed five features per image — mean intensity, standard
+            deviation, binary area, and two GLCM texture measures (contrast and correlation).
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">Findings (honestly stated)</span>
+          <p>
+            Mean intensity was slightly higher in the NonDemented scans than the ModerateDemented
+            ones, consistent with reduced tissue density from atrophy. GLCM correlation was
+            slightly higher in the ModerateDemented cases, which could reflect textural
+            homogenization from neurodegeneration. Standard deviation showed no meaningful
+            difference between groups.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">Limitations</span>
+          <p>
+            Four images total is nowhere near enough for statistically valid conclusions, and we
+            said so in the original report. ROI extraction used fixed proportional cropping rather
+            than real anatomical segmentation, no skull stripping was applied, and no
+            classification or machine learning was used — this was a descriptive comparison, not a
+            detection system.
+          </p>
+        </div>
+
+        <div class="field-block">
+          <span class="field-label">What I learned</span>
+          <p>
+            This project taught me MATLAB Image Processing Toolbox fundamentals — Gaussian
+            filtering, histogram equalization, GLCM texture analysis — that I later drew on in my
+            independent work. It also gave me a concrete lesson in sample size: it's easy to look
+            at four numbers trending the "expected" direction and want to call it a finding. Being
+            explicit about what a 4-image observational comparison can and can't tell you is a
+            scoping judgment I try to apply more rigorously in my actual thesis research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLUSTER 2 ===================== -->
+  <section>
+    <div class="container">
+      <h2>Hands-On Systems Engineering</h2>
+      <p class="cluster-frame">Projects that show I can design and build real biomedical devices, not just analyze data.</p>
+      <p style="font-size:0.92rem; color:var(--ink-light); margin-top:-10px; margin-bottom:22px;">
+        <span class="tag tag-draft" style="margin:0;">Brief overview — detailed write-ups coming</span>
+      </p>
+
+      <div class="device-grid">
+        <div class="device-card">
+          <h3>IV Drip Controller</h3>
+          <p>
+            A low-cost Arduino-based automated IV drip controller with an IR sensor, servo motor,
+            real-time monitoring, and safety alarms — built as an alternative to commercial
+            infusion pumps. (2025)
+          </p>
+        </div>
+
+        <div class="device-card">
+          <h3>Dry Bath Incubator</h3>
+          <p>
+            An ATmega328P-based dry bath incubator with closed-loop proportional control, using a
+            DS18B20 temperature sensor and PWM heater regulation for biomedical sample incubation.
+            (2025)
+          </p>
+        </div>
+
+        <div class="device-card">
+          <h3>Digital Blood Pressure Monitor</h3>
+          <p>
+            A digital blood pressure monitoring system built with an Arduino Uno and an HX710B
+            pressure sensor, cuff, electric pump, valve, MOSFET module, and display. (2025)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container hero-ctas">
+      <a href="research.html" class="btn btn-outline">See my main research</a>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Interested in discussing research fit or my application? <a href="contact.html">Reach out</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
