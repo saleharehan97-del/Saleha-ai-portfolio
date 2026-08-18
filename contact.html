@@ -35,9 +35,33 @@
     <div class="container contact-block">
       <span class="eyebrow">Contact</span>
       <h1>Interested in discussing research fit or my application?</h1>
-      <p class="lede" style="margin:0 auto;">Reach out — I'd be glad to talk through the work in more depth.</p>
+      <p class="lede" style="margin:0 auto;">Send me a message directly, or reach out through the links below.</p>
 
-      <div class="contact-emails">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" style="max-width:480px; margin:32px auto; text-align:left;">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <div style="margin-bottom:16px;">
+          <label for="name" style="display:block; margin-bottom:6px; font-weight:600;">Name</label>
+          <input type="text" id="name" name="name" required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body); font-size:1rem;">
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label for="email" style="display:block; margin-bottom:6px; font-weight:600;">Email</label>
+          <input type="email" id="email" name="email" required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body); font-size:1rem;">
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label for="message" style="display:block; margin-bottom:6px; font-weight:600;">Message</label>
+          <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-family:var(--font-body); font-size:1rem;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </form>
+
+      <div class="contact-emails" style="margin-top:8px;">
         <a href="mailto:Saleharehan97@gmail.com">Saleharehan97@gmail.com</a>
       </div>
 
