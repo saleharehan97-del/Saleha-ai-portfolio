@@ -65,6 +65,13 @@ a:hover { color: var(--terracotta); }
   margin: 0 auto;
   padding: 0 24px;
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+}
 
 /* ---------- Header / Nav ---------- */
 
