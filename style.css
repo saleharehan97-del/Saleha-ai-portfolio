@@ -362,3 +362,10 @@ footer.site-footer a { color: var(--mauve-dark); }
   color: var(--ink-light);
   margin-top: 8px;
 }
+* {
+  max-width: 100vw;
+}
+
+.hero-circles span {
+  max-width: none;
+}
