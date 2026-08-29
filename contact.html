@@ -54,8 +54,11 @@
       <h1>Interested in discussing research fit or my application?</h1>
       <p class="lede" style="margin:0 auto;">Send me a message directly, or reach out through the links below.</p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" style="max-width:480px; margin:32px auto; text-align:left;">
-        <input type="hidden" name="form-name" value="contact">
+      <form name="contact" method="POST" action="https://api.web3forms.com/submit" style="max-width:480px; margin:32px auto; text-align:left;">
+        <input type="hidden" name="access_key" value="2928e07d-0fbf-40ed-84dc-00ec0838d35e">
+        <input type="hidden" name="subject" value="New message from portfolio contact form">
+        <input type="hidden" name="redirect" value="https://saleharehan97-del.github.io/Saleha-ai-portfolio/thanks.html">
+        <input type="checkbox" name="botcheck" style="display:none;">
         <p style="display:none;">
           <label>Don't fill this out if you're human: <input name="bot-field"></label>
         </p>
